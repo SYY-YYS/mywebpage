@@ -1,0 +1,139 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        
+    }
+    :root {
+        font-family: monospace;
+    }
+    body {
+        background-color: bisque;
+    }
+    nav {
+        position:fixed;
+        width: 100%;
+        top:0px;
+        left:0px;
+        background-color: rgba(244, 165, 96, 0.715);
+        padding: 0.5%;
+        border-bottom: 5px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 0.5%;
+        margin-top: 0.5%;
+        padding: 0px;
+        border: 2px solid black;
+        /* pointer-events: none; */
+    }
+    .nav-link {
+        /* background-color: rgba(244, 165, 96, 0.715); */
+        flex: 1;
+        text-align: left;
+        
+        /* fill: white;
+        stroke: black;
+        stroke-width: 22px;
+        paint-order: fill stroke; */
+    }
+    .nav-link ul li{
+        list-style: none;
+        display: inline-block;
+        
+    }
+    .nav-link ul li a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 8px 12px;
+        font-size: 20px;       
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+    .nav-link ul li a:hover {
+        /* text-decoration: underline; */
+        text-decoration-color: black;
+        text-decoration-line: underline;
+        transition: 1s;
+
+    }
+    #about-me {
+        position: relative;
+        top: 50px;
+        text-align: center;
+        background-color:rgb(245, 241, 161);
+        border: 1px solid black; 
+    }
+    
+    #jumping-ball {
+        z-index: 10;
+        display:block;
+        height:5vh;
+        width:5vh;
+        border-radius: 50%;
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        border: 1px solid black;
+        /* box-shadow: -5px -5px 5px black; */
+    /* }
+    #jumping-ball:hover { */
+        background-color: rgb(170, 234, 155);
+        animation-name: bouncing;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        /* animation-fill-mode: forwards; */
+        /* modify more smooth */
+        animation-timing-function: cubic-bezier(0.5,-0.5,0.51,1); 
+    }
+    @keyframes bouncing {
+        0% {
+            top: 5%;
+        }
+        50% {
+            top: 17.5%;
+            height: 3vh;
+            background-color: rgb(102, 243, 135);
+        }
+        100% {
+            top: 5%;
+        }
+    }
+    nav .fa {
+        display: none;
+    }
+    @media (max-width: 500px) {
+        nav {
+            position: fixed;
+            left: -180px;
+            width: 180px;
+            height: 100%;
+            display: block;
+            z-index: 2;
+        }
+        .nav-link ul li {
+            display: flex;
+            /* flex: 1; */
+            margin: 10px;
+        }
+        .nav-link ul li a{
+            /* text-align: left; */
+        }
+   
+        nav .fa {
+            display: block;
+            font-size: 35px;
+        }
+        /* #cross {
+            position: relative;
+            left: 170px;
+        } */
+    }
+
+</style>

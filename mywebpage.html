@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <!-- a navigation bar with jumping function -->
+    
+    <head>
+        <link rel='stylesheet' href='webpage.css'>
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <!-- more about me like what I did to go to IT/ some projects (Github links) -->
+    <i class="fa fa-bars" onclick="showmenu()"></i>
+    <nav id="navlink">
+        <img id="icon" src="icon.jpeg" alt="writer's icon" onclick="clickIcon">
+        <div class="nav-link">
+            <i class="fa fa-times-circle-o" onclick="hidemenu()"></i>        
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="">My Projects</a></li>
+                <li><a href="contact-me">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- a jumping ball to make the page interesting -->
+    <div id="jumping-ball"></div>
+    <!-- brief introduction of myself (persuing) -->
+    <body>
+        <section id="about-me">
+            <h1 style="font-size: 40px">
+                Hi, I am Samuel Siu.
+            </h1> 
+            <p style="font-size: 14px; text-align: left; margin-left: 1.5%">
+                I am a post-graduate science degree student, 
+                but currently opting for a front-end web developer position.
+            </p>
+        </section>
+
+        <p></p>
+        <p></p>
+        <p></p>
+        <div id="contact-me"></div>
+    </body>
+    <footer>By Samuel Siu @2022</footer>
+</html>
+
+
+<script src="webpage.js"></script>
