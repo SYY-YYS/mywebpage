@@ -2,13 +2,22 @@
     * {
         margin: 0;
         padding: 0;
-        
     }
     :root {
         font-family: monospace;
     }
-    body {
+    /* body {
         background-color: bisque;
+    } */
+    .header {
+        margin: 0;
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("icon.jpeg");
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
     }
     nav {
         position:fixed;
@@ -64,11 +73,22 @@
 
     }
     #about-me {
-        position: relative;
-        top: 50px;
+        position: absolute;
+        top: 40%;
+        left:50%;
+        transform: translate(-50%,-50%); 
+        /* why transform and translate */
         text-align: center;
-        background-color:rgb(245, 241, 161);
-        border: 1px solid black; 
+        /* background-color:rgb(245, 241, 161); */
+        border: 1px solid white; 
+        color: white;
+    }
+    #about-me h1 {
+        font-size: 40px;
+    }
+    #about-me p {
+        font-size: 14px;
+        margin: 10px 20px 40px;
     }
     
     #jumping-ball {
@@ -130,10 +150,10 @@
             display: block;
             font-size: 35px;
         }
-        /* #cross {
-            position: relative;
-            left: 170px;
-        } */
+
+        #about-me {
+            top: 40vh;
+        }
     }
 
 </style>
