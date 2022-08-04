@@ -8,7 +8,7 @@ document.title = "Samuel Siu's Webpaage";
 // }
 
 function hidemenu() {
-    document.getElementById('navlink').style.left = '-180px';
+    document.getElementById('navlink').style.left = '-300px';
 }
 function showmenu() {
     document.getElementById('navlink').style.left = '0px';

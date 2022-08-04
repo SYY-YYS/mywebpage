@@ -20,17 +20,17 @@
         z-index: -1;
     }
     nav {
-        position:fixed;
+        /* position:fixed;
         width: 100%;
         top:0px;
         left:0px;
         background-color: rgba(244, 165, 96, 0.715);
         padding: 0.5%;
-        border-bottom: 5px solid black;
-        display: flex;
+        border-bottom: 5px solid black; */
+        /* display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; */
     }
     nav img {
         width: 40px;
@@ -38,15 +38,26 @@
         border-radius: 50%;
         margin-left: 0.5%;
         margin-top: 0.5%;
-        padding: 0px;
+
         border: 2px solid black;
         /* pointer-events: none; */
     }
     .nav-link {
         /* background-color: rgba(244, 165, 96, 0.715); */
+        position:fixed;
+        width: 100%;
+        top:0px;
+        left:0px;
+        background-color: rgba(244, 165, 96, 0.715);
+        padding: 0.5%;
+        border-bottom: 5px solid black;
+
         flex: 1;
         text-align: left;
-        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* align-items: center; */
         /* fill: white;
         stroke: black;
         stroke-width: 22px;
@@ -55,7 +66,7 @@
     .nav-link ul li{
         list-style: none;
         display: inline-block;
-        
+        align-items: left;
     }
     .nav-link ul li a{
         text-decoration: none;
@@ -129,13 +140,15 @@
         display: none;
     }
     @media (max-width: 1100px) {
-        nav {
+        .nav-link {
             position: fixed;
-            left: -180px;
-            width: 180px;
-            height: 100%;
+            left: -300px;
+            top: 0px;
+            height: 100vh;
+            width: 300px;
             display: block;
-            z-index: 2;
+            z-index: 3;
+            border-right: 2px solid black;
         }
         .nav-link ul li {
             display: flex;
@@ -149,6 +162,11 @@
         nav .fa {
             display: block;
             font-size: 35px;
+            color: white;
+        }
+        nav i {
+            position: absolute;
+            
         }
 
         #about-me {
