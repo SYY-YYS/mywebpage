@@ -6,17 +6,29 @@
     :root {
         font-family: monospace;
     }
-    /* body {
-        background-color: bisque;
-    } */
-    .header {
+    body {
         min-height: 100vh;
+        /* height: 100%; */
         width: 100%;
         background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("icon.jpeg");
         position: relative;
         background-position: center;
         background-size: cover;
-        z-index: -1;
+        background-attachment: fixed;
+    }
+    .header {
+        /* min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("icon.jpeg");
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed; */
+
+
+        /* background-repeat: no-repeat; */
+        
+        /* z-index: -1; */
     }
     nav {
         /* position:fixed;
@@ -100,6 +112,37 @@
         font-size: 14px;
         margin: 10px 20px 40px;
     }
+    .about-me {
+
+        position:absolute;
+        bottom: -25%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+    .about-me div {
+        color: white;
+        border: 2px solid white;
+        border-radius: 15px;
+        width: 32vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 10px 10px 0;
+    }
+    .about-me i {
+        font-size: 5vh;
+        margin-top: 2vh;
+    }
+    .about-me h1 {
+        font-size: 30px;
+        
+    }
+    .about-me p {
+        font-size: 16px;
+        margin: 0 2vh 2vh;
+    }
+
     
     #jumping-ball {
         z-index: 10;
@@ -148,6 +191,7 @@
             display: block;
             z-index: 3;
             border-right: 2px solid black;
+            transition: 1s;
         }
         .nav-link ul {
             position: absolute;
@@ -167,8 +211,8 @@
             color: white;            
         }
         nav i {
-            position: absolute;
-            
+            position: fixed;
+
         }
         nav img {
             width: 7vh;
@@ -187,6 +231,15 @@
         #intro p {
             font-size: 35px;
             margin: 10px 20px 40px;
+        }
+
+        .about-me {
+            flex-direction: column;
+            bottom: -50%;
+        }
+        .about-me div {
+            width: 80vw;
+            margin: 0 10vw 2vh;
         }
     }
 
