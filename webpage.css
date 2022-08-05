@@ -118,17 +118,17 @@
         bottom: -25%;
         display: flex;
         justify-content: space-between;
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
     .about-me div {
         color: white;
         border: 2px solid white;
         border-radius: 15px;
-        width: 32vw;
+        /* width: 30%; */
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 10px 10px 0;
+        margin: 0 10px 0;
     }
     .about-me i {
         font-size: 5vh;
@@ -146,23 +146,40 @@
     .contact {
         border: 2px solid white;
         border-radius: 20px;
-        display: flex;
-        flex-direction: row;
+        
         position: absolute;
         bottom: -50%;
+
+        text-align: center;
+        margin: 0 20vw 0;
+        width: 60%;
     }
     .contact h1 {
         color: white;
         margin-left: 1vw;
+        
     }
-    .contact div{
+    .row {
+        display: flex;
+        align-items: row;
+        justify-content: center;
+    }
+    .contact div div{
         margin: 0 1vw 0;
         font-size: 5vh;
-        align-items: center;
+        
     }
     .contact div i {
         color: white;
 
+    }
+    footer {
+        color: white;
+        position: absolute;
+        bottom: -100%;
+        font-size: 1.4vh;
+        right: 2vw;
+        padding-bottom: 1vh;
     }
 
     
@@ -260,11 +277,20 @@
 
         .about-me {
             flex-direction: column;
-            bottom: -50%;
+            bottom: -68%;
         }
         .about-me div {
             width: 80vw;
             margin: 0 10vw 2vh;
+        }
+        .about-me div h1 {
+            font-size: 2.2vh;
+        }
+        .about-me div p {
+            font-size: 1.5vh;
+        }
+        .contact {
+            bottom: -85%;
         }
     }
 
