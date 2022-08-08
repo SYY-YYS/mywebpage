@@ -13,3 +13,12 @@ function hidemenu() {
 function showmenu() {
     document.getElementById('navlink').style.left = '0px';
 }
+document.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        if (document.getElementById('navlink').style.left === '0px') {
+            hidemenu();
+        } else {
+            showmenu();
+        }
+    }
+})

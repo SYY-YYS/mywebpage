@@ -59,7 +59,7 @@
         width: 100%;
         top:0px;
         left:0px;
-        background-color: rgba(244, 165, 96, 0.715);
+        background: linear-gradient(black ,rgb(202, 168, 147) 40%,white);
         padding: 0.5%;
         border-bottom: 5px solid black;
         flex: 1;
@@ -112,6 +112,9 @@
         font-size: 14px;
         margin: 10px 20px 40px;
     }
+    #about-me {
+        transition: 1s;
+    }
     .about-me {
 
         position:absolute;
@@ -119,6 +122,7 @@
         display: flex;
         justify-content: space-between;
         /* margin-left: 10px; */
+        
     }
     .about-me div {
         color: white;
@@ -196,7 +200,7 @@
         /* box-shadow: -5px -5px 5px black; */
     /* }
     #jumping-ball:hover { */
-        background-color: rgb(170, 234, 155);
+        background: linear-gradient(135deg, white 3%,rgb(123, 243, 96) 50%);
         animation-name: bouncing;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
@@ -212,7 +216,7 @@
         50% {
             top: 17.5%;
             height: 3vh;
-            background-color: rgb(102, 243, 135);
+            
         }
         100% {
             top: 5%;
@@ -243,7 +247,7 @@
             padding: 20px;
         }
         .nav-link ul li a{
-            font-size: 40px;
+            font-size: 3vh;
             
         }
    
@@ -268,10 +272,10 @@
             margin: 0 -10% 0 0;
         }
         #intro h1 {
-            font-size: 80px;
+            font-size: 4vh;
         }
         #intro p {
-            font-size: 35px;
+            font-size: 1.8vh;
             margin: 10px 20px 40px;
         }
 
