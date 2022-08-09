@@ -9,40 +9,16 @@
     body {
         min-height: 100vh;
         /* height: 100%; */
-        width: 100%;
+        width: auto;
+
         background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("icon.jpeg");
         position: relative;
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
-    }
-    .header {
-        /* min-height: 100vh;
-        width: 100%;
-        background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("icon.jpeg");
-        position: relative;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed; */
 
+    }
 
-        /* background-repeat: no-repeat; */
-        
-        /* z-index: -1; */
-    }
-    nav {
-        /* position:fixed;
-        width: 100%;
-        top:0px;
-        left:0px;
-        background-color: rgba(244, 165, 96, 0.715);
-        padding: 0.5%;
-        border-bottom: 5px solid black; */
-        /* display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center; */
-    }
     nav img {
         width: 40px;
         height: 40px;
@@ -68,6 +44,7 @@
         flex-direction: row;
         justify-content: space-between;
         justify-content: left;
+        z-index: 3;
         /* align-items: center; */
         /* fill: white;
         stroke: black;
@@ -106,28 +83,25 @@
         color: white;
     }
     #intro h1 {
-        font-size: 40px;
+        font-size: 5vh;
     }
     #intro p {
-        font-size: 14px;
+        font-size: 2.6vh;
         margin: 10px 20px 40px;
     }
-    #about-me {
-        transition: 1s;
-    }
+    
     .about-me {
-
-        position:absolute;
+        position: absolute;
         bottom: -25%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         /* margin-left: 10px; */
         
     }
     .about-me div {
         color: white;
-        border: 2px solid white;
-        border-radius: 15px;
+        border: 1vh solid white;
+        border-radius: 2vh;
         /* width: 30%; */
         display: flex;
         flex-direction: column;
@@ -139,12 +113,35 @@
         margin-top: 2vh;
     }
     .about-me h1 {
-        font-size: 30px;
+        font-size: 4vh;
         
     }
     .about-me p {
-        font-size: 16px;
+        font-size: 2.2vh;
         margin: 0 2vh 2vh;
+    }
+
+    .projects {
+        position: absolute;
+        bottom: -60%;
+        color: white;
+        width: 100%;
+        
+    }
+    .projects div {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 1vh;
+        margin-left: 1vw;
+    }
+    .projects i {
+        font-size: 5vh;
+        color: white;
+    }
+    
+    .projects div div a p {
+        color: white;
+        font-size: 2vh;
     }
 
     .contact {
@@ -152,7 +149,7 @@
         border-radius: 20px;
         
         position: absolute;
-        bottom: -50%;
+        bottom: -90%;
 
         text-align: center;
         margin: 0 20vw 0;
@@ -176,6 +173,14 @@
     .contact div i {
         color: white;
 
+    }
+    .ig {
+        display: flex;
+
+    }
+    .ig p {
+        color: white;
+        font-size: 2.2vh;
     }
     footer {
         color: white;
@@ -230,14 +235,14 @@
     @media (max-width: 1100px) {
         .nav-link {
             position: fixed;
-            left: -50vw;
+            left: -51vw;
             top: 0px;
             height: 100vh;
             width: 50vw;
             display: block;
-            z-index: 3;
             border-right: 2px solid black;
             transition: 1s;
+            /* margin: 0; */
         }
         .nav-link ul {
             position: absolute;
@@ -258,7 +263,7 @@
         }
         nav i {
             position: fixed;
-
+            z-index: 2;
         }
         nav img {
             width: 7vh;
@@ -280,12 +285,16 @@
         }
 
         .about-me {
+
+            width: 100%;
             flex-direction: column;
+
+            align-items: center;
             bottom: -68%;
         }
         .about-me div {
             width: 80vw;
-            margin: 0 10vw 2vh;
+            margin: 0 0 2vh;
         }
         .about-me div h1 {
             font-size: 2.2vh;
@@ -293,8 +302,30 @@
         .about-me div p {
             font-size: 1.5vh;
         }
-        .contact {
+        .projects {
             bottom: -85%;
+        }
+        .projects h1 {
+            font-size: 2.6vh;
+        }
+        .projects div div a p {
+            font-size: 2vh;
+        }
+        .contact {
+            bottom: -115%;
+        }
+        .contact h1 {
+            font-size: 2vh;
+        }
+        .row {
+            margin: 0 3vw 0;
+        }
+        .ig p {
+            font-size: 1.6vh;
+        }
+        
+        footer {
+            bottom: -120%;
         }
     }
 

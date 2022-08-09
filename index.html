@@ -8,7 +8,7 @@
         <link rel='stylesheet' href='webpage.css'>
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon"  href="icon.ico">
+        <link rel="icon" type="image/x-icon" href="icon.ico">
     </head>
     
     <!-- a navigation bar-->
@@ -19,7 +19,7 @@
             <i class="fa fa-times-circle-o" onclick="hidemenu()"></i>        
             <ul>
                 <li><a href="#about-me">About Me</a></li>
-                <li><a href="">My Projects</a></li>
+                <li><a href="#projects">My Projects</a></li>
                 <li><a href="#contact-me">Contact Me</a></li>
             </ul>
         </div>
@@ -28,7 +28,7 @@
     <div id="jumping-ball"></div>
     <!-- brief introduction of myself (persuing) -->
     <body>
-        <section class="header" data-z-index="1"></section>
+        <section class="header"></section>
         <div id="intro">
             <h1>
                 Hi, I am Samuel Siu.
@@ -70,8 +70,37 @@
             
         </section>
         <!-- more about me like what I did to go to IT/ some projects (Github links) -->
-        <section class="projects">
-
+        <section class="projects" id="projects">
+            <h1>
+                Some Projects:
+            </h1>
+            <div>
+                <div class="math-training">
+                    <a href="https://syy-yys.github.io/math-training-by-python/" target="_blank">
+                        <i class="fa fa-calculator"></i>
+                        <p>simple calculation training</p>
+                    </a>
+                </div>
+                <div class="conscious-life">
+                    <a href="https://github.com/SYY-YYS/consciouslife/blob/main/conscious%20life%202.0.py" target="_blank">
+                        <i class="fa fa-line-chart"></i>
+                        <p>to record time spent daily on excel</p>
+                    </a>
+                </div>
+                <div class="survey-form">
+                    <a href="https://github.com/SYY-YYS/consciouslife/tree/main/freecodeacademy%20projects/survey%20form" target="_blank">
+                        <i class="fa fa-question-circle-o"></i>
+                        <p>for collecting data</p>
+                    </a>
+                </div>
+                <div class="todo-list">
+                    <a href="https://syy-yys.github.io/simon-s-to-do-webpage-project/" target="_blank">
+                        <i class="fa fa-check-square-o"></i>
+                        <p>to-do list with localStorage</p>
+                    </a>
+                </div>
+            </div>
+            
         </section>
 
         <section class="contact" id="contact-me">
@@ -85,10 +114,17 @@
                     <a href="https://www.linkedin.com/in/yan-yat-siu-b12031212" target="_blank">
                         <i class="fa fa-linkedin-square"></i></a>
                 </div>
+                <div class="github">
+                    <a href="https://github.com/SYY-YYS" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
                 <div class="ig">
                     <a href="https://instagram.com/5amuel_training_log_lol?igshid=YmMyMTA2M2Y=" target="_blank">
                         <i class="fa fa-instagram"></i></a>
+                    <p> (training log)</p>
                 </div>
+                
             </div>
         </section>
     </body>
