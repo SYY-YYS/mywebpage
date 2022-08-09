@@ -19,7 +19,7 @@
 
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
-        height: 100vh;
+
     }
     html {
         scroll-behavior: smooth;
@@ -107,7 +107,7 @@
         justify-content: space-around;
         /* margin-left: 10px; */
         
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
     .about-me div {
         color: white;
@@ -134,36 +134,45 @@
 
     .projects {
         position: absolute;
-        bottom: -60%;
+        bottom: -70%;
         color: white;
         width: 100%;
         
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
     .projects div {
         display: grid;
-        grid-template-columns: auto auto auto;
-        grid-row-gap: 1vh;
+        grid-template-columns: repeat(3, 29vw);
+        grid-row-gap: 2vh;
+        grid-column-gap: 3vh;
         margin-left: 1vw;
     }
     .projects i {
         font-size: 5vh;
         color: white;
+        margin-top: 1vw;
+        margin-left: 1vw;
     }
     
+    .projects div div a {
+        width: auto;
+        background-color: rgba(84, 84, 84, 0.7);
+        text-decoration: none;
+    }
 
     .projects div div a p {
         color: white;
         font-size: 2vh;
+        margin-left: 1vw;
     }
     .contact {
         width: 100%;
         position: absolute;
-        bottom: -90%;
+        bottom: -100%;
         display: flex;
-        justify-content: center;
-        
-        text-align: center;    
+        justify-content: center;       
+        text-align: center;
+        scroll-snap-align: start;    
     }
     .contact-box {
         border: 2px solid white;
@@ -200,7 +209,7 @@
     footer {
         color: white;
         position: absolute;
-        bottom: -100%;
+        bottom: -110%;
         font-size: 1.4vh;
         right: 2vw;
         padding-bottom: 1vh;
@@ -225,16 +234,15 @@
         /* modify more smooth */
         animation-timing-function: cubic-bezier(0.5,-0.5,0.51,1); 
     }
-    #jumping-ball:active {
-        animation-iteration-count: 0;
-    }
+    
 
-    .projects div div a i:hover, .contact div i:hover {
+    .projects div div a:hover, .contact div i:hover {
         /* transition: 1s; */
         animation-name: ijump;
         animation-duration: 1s;
         animation-timing-function: ease;
-
+    }
+    .contact div i:hover {
         color: rgb(255, 255, 133);
     }
 

@@ -13,6 +13,15 @@ function hidemenu() {
 function showmenu() {
     document.getElementById('navlink').style.left = '0px';
 }
+function stopball(e) {
+    let check = getComputedStyle(document.getElementById('jumping-ball')).animationName;
+    if (check === 'bouncing') {
+        document.getElementById('jumping-ball').style.animationName = 'none';
+    } else {
+        document.getElementById('jumping-ball').style.animationName = 'bouncing';
+    }
+     
+}
 document.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
         if (document.getElementById('navlink').style.left === '0px') {
