@@ -17,6 +17,12 @@
         background-size: cover;
         background-attachment: fixed;
 
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+    html {
+        scroll-behavior: smooth;
     }
 
     nav img {
@@ -50,6 +56,8 @@
         stroke: black;
         stroke-width: 22px;
         paint-order: fill stroke; */
+
+        scroll-snap-align: start;
     }
     .nav-link ul li{
         list-style: none;
@@ -81,6 +89,8 @@
         /* background-color:rgb(245, 241, 161); */
         border: 1px solid white; 
         color: white;
+
+        
     }
     #intro h1 {
         font-size: 5vh;
@@ -97,6 +107,7 @@
         justify-content: space-around;
         /* margin-left: 10px; */
         
+        scroll-snap-align: start;
     }
     .about-me div {
         color: white;
@@ -127,6 +138,7 @@
         color: white;
         width: 100%;
         
+        scroll-snap-align: start;
     }
     .projects div {
         display: grid;
@@ -139,21 +151,24 @@
         color: white;
     }
     
+
     .projects div div a p {
         color: white;
         font-size: 2vh;
     }
-
     .contact {
-        border: 2px solid white;
-        border-radius: 20px;
-        
+        width: 100%;
         position: absolute;
         bottom: -90%;
-
-        text-align: center;
-        margin: 0 20vw 0;
-        width: 60%;
+        display: flex;
+        justify-content: center;
+        
+        text-align: center;    
+    }
+    .contact-box {
+        border: 2px solid white;
+        border-radius: 20px; 
+        width: 70%;
     }
     .contact h1 {
         color: white;
@@ -193,7 +208,7 @@
 
     
     #jumping-ball {
-        z-index: 10;
+        z-index: 4;
         display:block;
         height:5vh;
         width:5vh;
@@ -202,9 +217,6 @@
         right: 5%;
         top: 5%;
         border: 1px solid black;
-        /* box-shadow: -5px -5px 5px black; */
-    /* }
-    #jumping-ball:hover { */
         background: linear-gradient(135deg, white 3%,rgb(123, 243, 96) 50%);
         animation-name: bouncing;
         animation-duration: 1.5s;
@@ -212,6 +224,18 @@
         /* animation-fill-mode: forwards; */
         /* modify more smooth */
         animation-timing-function: cubic-bezier(0.5,-0.5,0.51,1); 
+    }
+    #jumping-ball:active {
+        animation-iteration-count: 0;
+    }
+
+    .projects div div a i:hover, .contact div i:hover {
+        /* transition: 1s; */
+        animation-name: ijump;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+
+        color: rgb(255, 255, 133);
     }
 
     @keyframes bouncing {
@@ -231,8 +255,20 @@
         display: none;
     }
 
+    @keyframes ijump {
+        0% {
+            transform: translateY(0);
+        }
+        20% {
+            transform: translateY(-1vh);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 
     @media (max-width: 1100px) {
+        
         .nav-link {
             position: fixed;
             left: -51vw;
@@ -265,6 +301,7 @@
             position: fixed;
             z-index: 2;
         }
+        
         nav img {
             width: 7vh;
             height: 7vh;
@@ -303,7 +340,11 @@
             font-size: 1.5vh;
         }
         .projects {
-            bottom: -85%;
+            bottom: -130%;
+        }
+        .projects div {
+            display:flex;
+            flex-direction: column;
         }
         .projects h1 {
             font-size: 2.6vh;
@@ -312,7 +353,7 @@
             font-size: 2vh;
         }
         .contact {
-            bottom: -115%;
+            bottom: -155%;
         }
         .contact h1 {
             font-size: 2vh;
@@ -325,7 +366,7 @@
         }
         
         footer {
-            bottom: -120%;
+            bottom: -170%;
         }
     }
 
