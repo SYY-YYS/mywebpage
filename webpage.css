@@ -107,7 +107,7 @@
     .about-me {
         position: relative;
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         
         display: flex;
         align-items: center;
@@ -118,13 +118,9 @@
         opacity: 0;
         transition: 0.5s;
     }
-    .about-me .education, .about-me .hobbies {
-        transform: translateX(30%);
-        transition: 1s;
-    }
-    .about-me .strength {
-        transform: translateX(-30%);
-        transition: 1s;
+    .about-me .education, .about-me .hobbies, .about-me .strength {
+        transform: translateY(calc(30vh*var(--i)));
+        transition: 1.5s;
     }
 
     .about-me.show {
@@ -414,6 +410,14 @@
         }
         .about-me div p {
             font-size: 1.5vh;
+        }
+        .about-me .education, .about-me .hobbies {
+            transform: translateX(10vw);
+            transition: 1.8s;
+        }
+        .about-me .strength {
+            transform: translateX(-10vw);
+            transition: 1.8s;
         }
         
         .projects div div {
