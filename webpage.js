@@ -1,5 +1,15 @@
 
-document.title = "Samuel Siu's Webpaage";
+$(document).ready(function() {
+    var controller = new ScrollMagic.Controller();
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: '.about-me'
+    })
+    .setClassToggle('.about-me', 'show')
+    .addTo(controller)
+});
+
+document.title = "Siu's Webpaage";
 
 // function clickIcon(event) {
 //     console.log(event.target);
@@ -13,7 +23,7 @@ function hidemenu() {
 function showmenu() {
     document.getElementById('navlink').style.left = '0px';
 }
-function stopball(e) {
+function stopball() {
     let check = getComputedStyle(document.getElementById('jumping-ball')).animationName;
     if (check === 'bouncing') {
         document.getElementById('jumping-ball').style.animationName = 'none';
@@ -31,3 +41,6 @@ document.addEventListener('keydown', e => {
         }
     }
 })
+
+// for scrolling animation
+

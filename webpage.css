@@ -17,6 +17,7 @@
         background-size: cover;
         background-attachment: fixed;
 
+        /* does not work in chrome */
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
 
@@ -108,6 +109,12 @@
         /* margin-left: 10px; */
         
         scroll-snap-align: center;
+
+        opacity: 0;
+        transition: 1s;
+    }
+    .about-me.show {
+        opacity: 1;
     }
     .about-me div {
         color: white;
