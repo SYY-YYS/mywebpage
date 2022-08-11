@@ -34,7 +34,6 @@
         margin-top: 0.5%;
 
         border: 2px solid black;
-        /* pointer-events: none; */
     }
     .nav-link {
         /* background-color: rgba(244, 165, 96, 0.715); */
@@ -49,10 +48,9 @@
         text-align: left;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         justify-content: left;
         z-index: 3;
-        /* align-items: center; */
+        align-items: center;
         /* fill: white;
         stroke: black;
         stroke-width: 22px;
@@ -80,7 +78,12 @@
         transition: 1s;
 
     }
-    #intro {
+    .intro {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+    }
+    .intro-box {
         position: absolute;
         top: 40%;
         left:50%;
@@ -93,31 +96,48 @@
 
         
     }
-    #intro h1 {
+    .intro-box h1 {
         font-size: 5vh;
     }
-    #intro p {
+    .intro-box p {
         font-size: 2.6vh;
         margin: 10px 20px 40px;
     }
     
     .about-me {
-        position: absolute;
-        bottom: -25%;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        
         display: flex;
-        justify-content: space-around;
+        align-items: center;
         /* margin-left: 10px; */
         
         scroll-snap-align: center;
 
         opacity: 0;
+        transition: 0.5s;
+    }
+    .about-me .education, .about-me .hobbies {
+        transform: translateX(30%);
         transition: 1s;
     }
+    .about-me .strength {
+        transform: translateX(-30%);
+        transition: 1s;
+    }
+
     .about-me.show {
         opacity: 1;
+        
     }
-    .about-me div {
+    .about-me.show .education, .about-me.show .strength, .about-me.show .hobbies {
+        transform: translateX(0);
+    }
+
+    .about-me div div {
         color: white;
+        
         border: 1vh solid white;
         border-radius: 2vh;
         /* width: 30%; */
@@ -125,6 +145,12 @@
         flex-direction: column;
         align-items: center;
         margin: 0 10px 0;
+        
+    }
+    .about-me .row {
+        height: max-content;
+        display: flex;
+        
     }
     .about-me i {
         font-size: 5vh;
@@ -140,14 +166,38 @@
     }
 
     .projects {
-        position: absolute;
-        bottom: -70%;
+        position: relative;
+        height: 100vh;
         color: white;
         width: 100%;
-        
+        display: flex;
+        align-items: center;
+
         scroll-snap-align: center;
+
+        
     }
-    .projects div {
+    
+
+    .project-items {
+        height:max-content;
+        width: 100%;
+        overflow: scroll;
+
+        
+    }
+    
+    .project-items div div {
+        opacity: 0;
+        transform: translateY(calc(50%*var(--i)));
+        transition: 1s;
+    }
+    .project-items.show div div {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    .projects div div {
         display: grid;
         grid-template-columns: repeat(3, 29vw);
         grid-row-gap: 2vh;
@@ -173,9 +223,11 @@
         margin-left: 1vw;
     }
     .contact {
+        /* background-color: aliceblue; */
+
         width: 100%;
-        position: absolute;
-        bottom: -100%;
+        position: relative;
+        height: 40vh;
         display: flex;
         justify-content: center;       
         text-align: center;
@@ -185,6 +237,7 @@
         border: 2px solid white;
         border-radius: 20px; 
         width: 70%;
+        height: fit-content;
     }
     .contact h1 {
         color: white;
@@ -195,6 +248,7 @@
         display: flex;
         align-items: row;
         justify-content: center;
+        
     }
     .contact div div{
         margin: 0 1vw 0;
@@ -207,20 +261,26 @@
     }
     .ig {
         display: flex;
-
     }
     .ig p {
         color: white;
         font-size: 2.2vh;
+        margin-left: 1vw;
     }
     footer {
         color: white;
-        position: absolute;
-        bottom: -110%;
+        position: relative;
+        height:fit-content;
+        
         font-size: 1.4vh;
-        right: 2vw;
         padding-bottom: 1vh;
+        display: flex;
+        justify-content: end;
     }
+    footer p {
+        margin-right: 1vw;
+    }
+    
 
     
     #jumping-ball {
@@ -301,6 +361,8 @@
         }
         .nav-link ul li {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
         }
         .nav-link ul li a{
             font-size: 3vh;
@@ -324,27 +386,27 @@
             left: 20px;
         }
 
-        #intro {
+        .intro-box {
             top: 40vh;
             margin: 0 -10% 0 0;
         }
-        #intro h1 {
+        .intro-box h1 {
             font-size: 4vh;
         }
-        #intro p {
+        .intro-box p {
             font-size: 1.8vh;
             margin: 10px 20px 40px;
         }
 
         .about-me {
-
             width: 100%;
-            flex-direction: column;
-
-            align-items: center;
-            bottom: -68%;
+            justify-content: center;
         }
-        .about-me div {
+        .about-me .row {
+            
+            flex-direction: column;
+        }
+        .about-me div div{
             width: 80vw;
             margin: 0 0 2vh;
         }
@@ -354,18 +416,17 @@
         .about-me div p {
             font-size: 1.5vh;
         }
-        .projects {
-            bottom: -130%;
-        }
-        .projects div {
+        
+        .projects div div {
             display:flex;
             flex-direction: column;
         }
         .projects h1 {
             font-size: 2.6vh;
         }
-        .projects div div a p {
+        .projects div div div a p {
             font-size: 2vh;
+            margin-right: 1vh;
         }
         .contact {
             bottom: -155%;

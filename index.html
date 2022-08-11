@@ -31,79 +31,82 @@
     <div id="jumping-ball" onclick="stopball()"></div>
     <!-- brief introduction of myself (persuing) -->
     <body>
-        <section class="header"></section>
-        <div id="intro">
-            <h1>
-                Hi, I am Samuel Siu
-            </h1> 
-            <p>
-                I am a science degree graduate, 
-                but currently opting for<br> a front-end web developer position
-            </p>
-        </div>
+        <section class="intro"  id="intro">
+            <div class="intro-box">
+                <h1>
+                    Hi, I am Samuel Siu
+                </h1> 
+                <p>
+                    I am a science degree graduate, 
+                    but currently opting for<br> a front-end web developer position
+                </p>
+            </div>
+        </section>
         <section class="about-me" id="about-me">
-            <div class="education">
-                <i class="fa fa-graduation-cap"></i>
-                <h1>
-                    Education & Skills
-                </h1>
-                <p>
-                    BSc(Hons) Food Safety and Technology, the HK PolyU<br>
-                    Python, HTML, CSS, JavaScript...
-                </p>
+            <div class="row">
+                <div class="education">
+                    <i class="fa fa-graduation-cap"></i>
+                    <h1>
+                        Education & Skills
+                    </h1>
+                    <p>
+                        BSc(Hons) Food Safety and Technology, the HK PolyU<br>
+                        Python, HTML, CSS, JavaScript...
+                    </p>
+                </div>
+                <div class="strength">
+                    <i class="fa fa-thumbs-o-up"></i>
+                    <h1>
+                        Strength
+                    </h1>
+                    <p>
+                        Fast-learner, patient, high adaptablility
+                    </p>
+                </div>
+                <div class="hobbies">
+                    <i class="fa fa-play-circle"></i>
+                    <h1>
+                        Hobbies
+                    </h1>
+                    <p>
+                        Powerlifting, ball games and learning new knowledge
+                    </p>
+                </div>
             </div>
-            <div class="strength">
-                <i class="fa fa-thumbs-o-up"></i>
-                <h1>
-                    Strength
-                </h1>
-                <p>
-                    Fast-learner, patient, high adaptablility
-                </p>
-            </div>
-            <div class="hobbies">
-                <i class="fa fa-play-circle"></i>
-                <h1>
-                    Hobbies
-                </h1>
-                <p>
-                    Powerlifting, ball games and learning new knowledge
-                </p>
-            </div>
-            
         </section>
         <!-- more about me like what I did to go to IT/ some projects (Github links) -->
         <section class="projects" id="projects">
-            <h1>
-                Some Projects:
-            </h1>
-            <div>
-                <div class="math-training">
-                    <a href="https://syy-yys.github.io/math-training-by-python/" target="_blank">
-                        <i class="fa fa-calculator"></i>
-                        <p>simple calculation training</p>
-                    </a>
-                </div>
-                <div class="conscious-life">
-                    <a href="https://github.com/SYY-YYS/consciouslife/blob/main/conscious%20life%202.0.py" target="_blank">
-                        <i class="fa fa-line-chart"></i>
-                        <p>to record time spent daily on excel</p>
-                    </a>
-                </div>
-                <div class="survey-form">
-                    <a href="https://github.com/SYY-YYS/consciouslife/tree/main/freecodeacademy%20projects/survey%20form" target="_blank">
-                        <i class="fa fa-question-circle-o"></i>
-                        <p>for collecting data</p>
-                    </a>
-                </div>
-                <div class="todo-list">
-                    <a href="https://syy-yys.github.io/simon-s-to-do-webpage-project/" target="_blank">
-                        <i class="fa fa-check-square-o"></i>
-                        <p>to-do list with localStorage</p>
-                    </a>
+            <div class="project-items">
+                <h1>
+                    Some Projects:
+                </h1>
+                <div>
+                    <div class="math-training" style="--i:1">
+                        <a href="https://syy-yys.github.io/math-training-by-python/" target="_blank">
+                            <i class="fa fa-calculator"></i>
+                            <p>simple calculation training</p>
+                        </a>
+                    </div>
+                    <div class="conscious-life" style="--i:2">
+                        <a href="https://github.com/SYY-YYS/consciouslife/blob/main/conscious%20life%202.0.py" target="_blank">
+                            <i class="fa fa-line-chart"></i>
+                            <p>to record time spent daily on excel</p>
+                        </a>
+                    </div>
+                    <div class="survey-form" style="--i:3">
+                        <a href="https://github.com/SYY-YYS/consciouslife/tree/main/freecodeacademy%20projects/survey%20form" target="_blank">
+                            <i class="fa fa-question-circle-o"></i>
+                            <p>for collecting data</p>
+                        </a>
+                    </div>
+                    <div class="todo-list" style="--i:4">
+                        <a href="https://syy-yys.github.io/simon-s-to-do-webpage-project/" target="_blank">
+                            <i class="fa fa-check-square-o"></i>
+                         <p>to-do list with localStorage</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-            
         </section>
 
         <section class="contact" id="contact-me">
@@ -132,8 +135,9 @@
                 </div>
             </div>
         </section>
+        <footer><p>By Samuel Siu @2022</p></footer>
     </body>
-    <footer>By Samuel Siu @2022</footer>
+    
 
 </html>
 <!-- scroll magic -->

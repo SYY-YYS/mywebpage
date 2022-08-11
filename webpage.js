@@ -2,11 +2,17 @@
 $(document).ready(function() {
     var controller = new ScrollMagic.Controller();
 
-    var scene = new ScrollMagic.Scene({
+    var scene1 = new ScrollMagic.Scene({
         triggerElement: '.about-me'
-    })
-    .setClassToggle('.about-me', 'show')
-    .addTo(controller)
+    });
+    var scene2 = new ScrollMagic.Scene({
+        triggerElement: '.project-items'
+    });
+    scene1.setClassToggle('.about-me', 'show');
+    scene1.addTo(controller);
+
+    scene2.setClassToggle('.project-items', 'show');
+    scene2.addTo(controller);
 });
 
 document.title = "Siu's Webpaage";
