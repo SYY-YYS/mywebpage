@@ -9,7 +9,7 @@
     body {
         min-height: 100vh;
         /* height: 100%; */
-        width: auto;
+        width: 100vw;
 
         background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("icon.jpeg");
         position: relative;
@@ -17,7 +17,7 @@
         background-size: cover;
         background-attachment: fixed;
 
-        /* does not work in chrome */
+        /* does not work in chrome, phone */
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
 
@@ -402,8 +402,7 @@
             width: 100%;
             justify-content: center;
         }
-        .about-me .row {
-            
+        .about-me .row {            
             flex-direction: column;
         }
         .about-me div div{
@@ -428,9 +427,7 @@
             font-size: 2vh;
             margin-right: 1vh;
         }
-        .contact {
-            bottom: -155%;
-        }
+        
         .contact h1 {
             font-size: 2vh;
         }
