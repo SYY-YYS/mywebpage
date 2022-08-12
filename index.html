@@ -15,7 +15,7 @@
     <nav class="nav-bar">
         <i class="fa fa-bars" onclick="showmenu()"></i>        
         <div class="nav-link" id="navlink">
-            <a href="#intro"><img id="icon" src="icon.jpeg" alt="writer's icon"></a>
+            <a href="#intro" onclick="toggleVideo()"><img id="icon" src="icon.jpeg" alt="writer's icon"></a>
             <i class="fa fa-times-circle-o" onclick="hidemenu()"></i>        
             <ul>
                 <li><a href="#about-me">About Me</a></li>
@@ -24,6 +24,10 @@
             </ul>
         </div>
     </nav>
+    <div class="video">
+        <video src="170kg.mp4" controls="true"></video>
+        <i class="fa fa-times-circle-o" onclick="toggleVideo()"></i>
+    </div>
     <!-- a jumping ball to make the page interesting -->
     <div id="jumping-ball" onclick="stopball()"></div>
     <!-- brief introduction of myself (persuing) -->

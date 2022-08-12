@@ -42,6 +42,13 @@ function stopball() {
     }
      
 }
+function toggleVideo() {
+    const gymvideo = document.querySelector('.video');
+    const video = document.querySelector('video');
+    gymvideo.classList.toggle('active');
+    video.currentTime = 0;
+    video.pause();
+}
 document.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
         if (document.getElementById('navlink').style.left === '0px') {
@@ -53,7 +60,7 @@ document.addEventListener('keydown', e => {
 });
 window.addEventListener('scroll', () => {
     var nav = document.querySelector('nav');
-    nav.classList.toggle('turn', window.scrollY > 0);
+    nav.classList.toggle('turn', window.scrollY > 8);
 });
 
 // for scrolling animation
