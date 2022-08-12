@@ -17,10 +17,14 @@
         background-size: cover;
         background-attachment: fixed;
 
+        
+    }
+    .scroll-snap-container {
+        height: 100vh;
+        width: 100%;
         /* does not work in chrome, phone */
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
-
     }
     html {
         scroll-behavior: smooth;
@@ -82,6 +86,8 @@
         position: relative;
         height: 100vh;
         width: 100%;
+
+        scroll-snap-align: start;
     }
     .intro-box {
         position: absolute;
@@ -111,26 +117,14 @@
         
         display: flex;
         align-items: center;
-        /* margin-left: 10px; */
+        
         
         scroll-snap-align: center;
 
         opacity: 0;
         transition: 0.5s;
     }
-    .about-me .education, .about-me .hobbies, .about-me .strength {
-        transform: translateY(calc(30vh*var(--i)));
-        transition: 1.5s;
-    }
-
-    .about-me.show {
-        opacity: 1;
-        
-    }
-    .about-me.show .education, .about-me.show .strength, .about-me.show .hobbies {
-        transform: translateX(0);
-    }
-
+    
     .about-me div div {
         color: white;
         
@@ -159,6 +153,19 @@
     .about-me p {
         font-size: 2.2vh;
         margin: 0 2vh 2vh;
+    }
+
+    .about-me .education, .about-me .hobbies, .about-me .strength {
+        transform: translateY(calc(30vh*var(--i)));
+        transition: 1.5s;
+    }
+
+    .about-me.show {
+        opacity: 1;
+        
+    }
+    .about-me.show .education, .about-me.show .strength, .about-me.show .hobbies {
+        transform: translateX(0);
     }
 
     .projects {
@@ -236,9 +243,7 @@
         height: fit-content;
     }
     .contact h1 {
-        color: white;
-        margin-left: 1vw;
-        
+        color: white;        
     }
     .row {
         display: flex;
