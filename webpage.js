@@ -8,11 +8,15 @@ $(document).ready(function() {
     var scene2 = new ScrollMagic.Scene({
         triggerElement: '.project-items'
     });
+    var scene3 = new ScrollMagic.Scene({
+        triggerElement: '.intro'
+    });
     scene1.setClassToggle('.about-me', 'show');
     scene1.addTo(controller);
 
     scene2.setClassToggle('.project-items', 'show');
     scene2.addTo(controller);
+
 });
 
 document.title = "Siu's Webpaage";
@@ -46,7 +50,11 @@ document.addEventListener('keydown', e => {
             showmenu();
         }
     }
-})
+});
+window.addEventListener('scroll', () => {
+    var nav = document.querySelector('nav');
+    nav.classList.toggle('turn', window.scrollY > 0);
+});
 
 // for scrolling animation
 
