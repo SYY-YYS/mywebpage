@@ -151,6 +151,7 @@
     }
     .intro-box h1 {
         font-size: 5vh;
+        margin-top: 1vh;
     }
     .intro-box p {
         font-size: 2.6vh;
@@ -509,7 +510,7 @@
         .projects h1 {
             font-size: 2.6vh;
         }
-        .projects div div div a p {
+        .projects div div div p {
             font-size: 2vh;
             margin-right: 1vh;
         }
