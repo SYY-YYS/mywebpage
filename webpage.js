@@ -28,7 +28,7 @@ document.title = "Siu's Webpaage";
 // }
 
 function hidemenu() {
-    document.getElementById('navlink').style.left = '-51vw';
+    document.getElementById('navlink').style.left = '-55vw';
 }
 function showmenu() {
     document.getElementById('navlink').style.left = '0px';
@@ -63,5 +63,4 @@ window.addEventListener('scroll', () => {
     nav.classList.toggle('turn', window.scrollY > 8);
 });
 
-// for scrolling animation
 
