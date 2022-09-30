@@ -50,13 +50,14 @@ function toggleVideo() {
     video.pause();
 }
 document.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-        if (document.getElementById('navlink').style.left === '0px') {
-            hidemenu();
-        } else {
-            showmenu();
-        }
-    }
+    console.log(e);
+    // if (e.key === 'Enter') {
+    //     if (document.getElementById('navlink').style.left === '0px') {
+    //         hidemenu();
+    //     } else {
+    //         showmenu();
+    //     }
+    // }
 });
 window.addEventListener('scroll', () => {
     var nav = document.querySelector('nav');

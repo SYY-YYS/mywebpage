@@ -1,4 +1,3 @@
-
     * {
         margin: 0px;
         padding: 0px;
@@ -335,6 +334,47 @@
         font-size: 2.2vh;
         margin-left: 1vw;
     }
+
+    .recommend {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .recommend-box {
+        width: 80vw;
+        max-height:fit-content;
+        background-color: rgba(240, 248, 255, 0.415);
+        text-align: center;
+        transform: translate(2vw,2vh);
+        box-shadow: -2vw -2vh rgba(255, 255, 255, 0.826);
+    }
+    .recommend .recommend-box h1{
+        font-size: 5vh;
+        font-weight: bold;
+        padding-bottom: 1vh;
+    }
+    .recommend .recommend-box .inputBox {
+        text-align: left;
+
+    }
+    .recommend .recommend-box .inputBox h1{
+        font-size: 2vh;
+        
+        margin-left: 2vw;
+    }
+    .recommend .recommend-box .inputBox input,
+    .recommend .recommend-box .inputBox textarea {
+        margin-left: 2vw;
+        width: 95%;
+        margin-bottom: 1vh;
+    }
+    .recommend .recommend-box .inputBox textarea {
+        min-height: 5vh;
+        resize: none;
+    }
+
     footer {
         color: white;
         position: relative;
@@ -525,8 +565,5 @@
             font-size: 1.6vh;
         }
         
-        footer {
-            
-        }
     }
 
