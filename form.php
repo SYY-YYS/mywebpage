@@ -1,4 +1,5 @@
 <?php
+// failed to send email after putting on github (405 error)
 $email = $_POST['email'];
 $message = $_POST['message'];
 

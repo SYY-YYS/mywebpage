@@ -50,7 +50,7 @@ function toggleVideo() {
     video.pause();
 }
 document.addEventListener('keydown', e => {
-    console.log(e);
+    // console.log(e);
     // if (e.key === 'Enter') {
     //     if (document.getElementById('navlink').style.left === '0px') {
     //         hidemenu();
