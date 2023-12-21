@@ -126,7 +126,8 @@
         
     }
 
-    .intro {
+    /* next is to add spinning icons of programming languages or frameworks */
+    .intro, .work {
         position: relative;
         height: 100vh;
         width: 100%;
@@ -220,6 +221,24 @@
     span {
         cursor: wait;
     }
+
+    .work {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+    }
+    .work h1 {
+        font-size: 4vh;
+    }
+    .work li {
+        font-size: 2.2vh;
+        list-style-type: none;
+    }
+
+
     .projects {
         position: relative;
         height: 100vh;
