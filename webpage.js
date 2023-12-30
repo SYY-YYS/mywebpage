@@ -9,13 +9,17 @@ $(document).ready(function() {
         triggerElement: '.project-items'
     });
     var scene3 = new ScrollMagic.Scene({
-        triggerElement: '.intro'
+        triggerElement: '.work'
     });
     scene1.setClassToggle('.about-me', 'show');
     scene1.addTo(controller);
 
     scene2.setClassToggle('.project-items', 'show');
     scene2.addTo(controller);
+
+    scene3.setClassToggle('.container', 'active')
+    .addTo(controller);
+
 
 });
 

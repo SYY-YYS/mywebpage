@@ -228,15 +228,86 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: aqua;
+        
+        /* background-color: white; */
     }
     .work h1 {
         font-size: 4vh;
+        z-index: 10;
+    }
+    .work ul {
+        z-index: 10;
     }
     .work li {
         font-size: 2.2vh;
         list-style-type: none;
     }
+
+    /* adding work section */
+      
+    .container{
+        width: 100vh;
+        height: 100vh;
+        max-width: 500px;
+        max-height: 500px;
+        position: absolute;
+        /* background-color: black; */
+        border-radius: 50%;
+        animation: spin 20s linear infinite;
+        transition: 1s;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .container.active{
+        opacity: 0.8;
+    }
+
+    .container.active > .field {
+        height: calc(var(--d)*100px)
+    }
+      
+    .container .field {
+        width: auto;
+        height: 20px;
+        position: absolute;
+        border-radius: 5px;
+        /* animation-name: moving;
+        animation-duration: calc(var(--d)*3);
+        animation-iteration-count: infinite;
+        animation-timing-function:ease-in; */
+        /* animation:  moving calc(var(--d)*3) ease-in 2s infinite */
+        animation: spin 20s linear infinite reverse;
+        transition: height 1s;
+    }
+    
+    .container .field:hover {
+        height: calc(var(--d)*150px)
+    }
+    
+    /* #container:hover, #container:hover > .field{
+        animation-duration: 5s;
+        
+    } */
+    
+    @keyframes moving {
+        0% {transform: translate(-10px,-10px);}
+        12.5% {transform: translate(-13px,0px);}
+        25% {transform: translate(-10px,10px);}
+        /* 37.5% {transform: translate(0px,0px);} */
+        50% {transform: translate(10px,-10px);}
+        62.5% {transform: translate(13px,0px);}
+        75% {transform: translate(10px,10px);}
+        /* 87.5% {transform: translate(0px,0px);} */
+        100% {transform: translate(-10px,-10px);}
+    }
+    
+    @keyframes spin {
+        100% {transform: rotate(1turn);}
+    }
+
 
 
     .projects {
@@ -469,6 +540,9 @@
             transform: translateY(0);
         }
     }
+
+    
+    
 
     @media (max-width: 1100px) {
         
