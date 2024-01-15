@@ -635,6 +635,14 @@
             transform: translateX(-10vw);
             transition: 1.8s;
         }
+
+        .work h1 {
+            text-align: center;
+        }
+        .work ul {
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
         
         .projects div div {
             display:flex;
