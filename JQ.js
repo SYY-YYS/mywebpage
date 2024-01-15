@@ -7,7 +7,9 @@ $(document).ready(function(){
   var angle = 0,
     step = (2 * Math.PI) / fields.length;
   var y_scroll_pos = window.scrollY;
-  var scroll_pos = $("#container").offset().top;
+  var scroll_pos = $("#work").offset().top;
+
+  console.log(scroll_pos);
 
   const circular = function() {
     var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).width() / 2);
@@ -24,28 +26,40 @@ $(document).ready(function(){
 
   const addRadiusByTime = setInterval(function(){
     y_scroll_pos = window.scrollY;
-    scroll_pos = $("#container").offset().top;
-    if(radius<=200 && y_scroll_pos > scroll_pos) {
+    scroll_pos = $("#work").offset().top;
+
+    console.log(scroll_pos, y_scroll_pos);
+    if(radius<=200 && y_scroll_pos >= scroll_pos) {
       radius += 5
       console.log("added 10")
     };
     fields.each(circular);
   }, 40);
 
+  const triggerFunction = setInterval(function() {
+    // console.log(1)
+    if($('.container').hasClass('active')) {
+      $(window).trigger('classChanged')
+    }
+  }, 200);
+  triggerFunction
   
 
-  $(window).on('scroll', function(){
-    y_scroll_pos = window.scrollY;
-    scroll_pos = $("#container").offset().top;
-    console.log(scroll_pos)
-    if(y_scroll_pos > scroll_pos) {
-      $(".container").addClass("active")
-      addRadiusByTime
+  $(window).on('classChanged', function(){
+    addRadiusByTime
 
-    } else {
-      radius = 10;
-      $(".container").removeClass("active")
-    }
+    // y_scroll_pos = window.scrollY;
+    // scroll_pos = $("#work").offset().top;
+    // console.log(scroll_pos)
+    // if(y_scroll_pos >= scroll_pos) {
+    //   $(".container").addClass("active")
+    //   addRadiusByTime
+
+    // } 
+    // else {
+    //   radius = 10;
+    //   $(".container").removeClass("active")
+    // }
     
   });
 
