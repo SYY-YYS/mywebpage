@@ -228,7 +228,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+        overflow: hidden;
         /* background-color: white; */
     }
     .work h1 {
@@ -259,7 +259,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
     .container.active{
         opacity: 0.8;
